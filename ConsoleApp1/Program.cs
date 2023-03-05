@@ -4,12 +4,20 @@
 //Console.WriteLine(Factorial(5));
 //Console.WriteLine(Power(2, 4));
 //Console.WriteLine(Walk(5));
-Console.WriteLine(SumNumbers(5));
+//Console.WriteLine(SumNumbers(5));
+Console.WriteLine(GridPaths(3,3));
+
+int GridPaths(int n, int m)
+{
+    if (n == 1 || m == 1) return 1;
+
+    return GridPaths(n, m - 1) + GridPaths(m - 1, n);
+}
 
 int SumNumbers(int num)
 {
     int sum = 0;
-    if (num == 0) return 1;
+    if (num == 0) return 0;
 
     return num + SumNumbers(num - 1);
 }
