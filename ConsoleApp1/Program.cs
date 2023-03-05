@@ -5,7 +5,25 @@
 //Console.WriteLine(Power(2, 4));
 //Console.WriteLine(Walk(5));
 //Console.WriteLine(SumNumbers(5));
-Console.WriteLine(GridPaths(3,3));
+//Console.WriteLine(GridPaths(3,3));
+Console.WriteLine(SumDigits(9));
+Console.WriteLine(SumDigits(7));
+Console.WriteLine(SumDigits(3));
+Console.WriteLine(SumDigits(1));
+Console.WriteLine(SumDigits(0));
+Console.WriteLine(SumDigits(21));
+Console.WriteLine(SumDigits(45));
+Console.WriteLine(SumDigits(93));
+Console.WriteLine(SumDigits(15));
+Console.WriteLine(SumDigits(129));
+
+
+int SumDigits(int n)
+{
+    if (n < 10 && n >= 0) return n;
+
+    return SumDigits(n % 10) + SumDigits(n / 10);
+}
 
 int GridPaths(int n, int m)
 {
